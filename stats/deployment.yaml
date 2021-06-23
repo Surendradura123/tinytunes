@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stats-deployment
+  labels:
+    app: stats
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stats
+  template:
+    metadata:
+      labels:
+        app: stats
+    spec:
+      containers:
+      - name: stats
+        image: stats:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3002

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-and-play-deployment
+  labels:
+    app: search-and-play
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: search-and-play
+  template:
+    metadata:
+      labels:
+        app: search-and-play
+    spec:
+      containers:
+      - name: search-and-play
+        image: search-and-play:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000

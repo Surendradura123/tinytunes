@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: automatic-play-deployment
+  labels:
+    app: automatic-play
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: automatic-play
+  template:
+    metadata:
+      labels:
+        app: automatic-play
+    spec:
+      containers:
+      - name: automatic-play
+        image: automatic-play:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3003

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playlists-deployment
+  labels:
+    app: playlists
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: playlists
+  template:
+    metadata:
+      labels:
+        app: playlists
+    spec:
+      containers:
+      - name: playlists
+        image: playlists:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3001

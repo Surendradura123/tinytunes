@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <script src="./main.js"> </script>
+    <style>
+      .body{
+        border: 1px solid black;
+        background-color: lightblue;
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+      }
+      
+    </style>
+    
+</head>
+
+<body>
+	<div class="body">
+    <h1 style> TinyTunes </h1>
+  <!-- This is a first service called search and play to show in the html file. -->
+	  <div>
+      <h1> First Service : Search and Play Songs <h1>
+      <div id="search-bar">
+      <input type="text" id="search-term" /> <button onclick="search()">Search</button>
+        <div id="results"> Nothing to show</div>
+      </div>
+    </div>
+    <br><br> 
+    <!-- This is a second service called create-playlist to show in the html file. -->  
+    <div>
+      <h1>Second Service : Playlist of the songs</h1>            
+      <button onclick="playlist()"> Song Playlist</button>
+      <div id="playlist">Click button to show the playlist</div>
+    </div>  
+
+    <br><br> 
+    <!-- This is a third service called Stats to show the html file. --> 
+    <div>
+      <h1> Third Service : Stats of the Song </h1>
+      <div id="stats"> Stats</div>
+    </div>
+    <br><br> 
+
+    <!-- This is a fourth service called Automatic Playlist to show the html file. --> 
+    <div>
+      <h1> Fourth Service : Automtic Playlist </h1>
+      <button onclick="autoplaylist1()"> Playlist1</button>
+		  <div id="autoplaylist1">Automatic Playlis1</div>
+      <button onclick="autoplaylist2()"> Playlist2</button>
+		  <div id="autoplaylist2">Automatic Playlist2</div>
+      <button onclick="autoplaylist3()"> Playlist3</button>
+		  <div id="autoplaylist3">Automatic Playlist3</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
+
+<!--
+//References:
+// Fastify, Fast and low overhead web framework, for Node.js (2021) Fastify. Available at: https://www.fastify.io/ (Accessed: 2 June 2021).
+// Gonzalez, D. (2021) Cloud Services & Integration [Wed 12:00] – dgonzalez@cct.ie - Google Drive. Available at: https://drive.google.com/drive/folders/1-bMtWxYjQssLye5Nzkfxvdo8IgFkQveh (Accessed: 2 June 2021).
+-->
